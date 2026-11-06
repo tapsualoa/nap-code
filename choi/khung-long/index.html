@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Game Khủng Long · chơi thử</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --bg: #0b1020; --card: #151b2e; --txt: #e8ecf6; --mut: #8b93ad; --acc: #ffd34d; --line: #263050; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--txt); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; padding: 14px 16px 24px; gap: 12px; }
+  header { width: 100%; max-width: 760px; display: flex; align-items: center; gap: 10px; }
+  header h1 { font-size: 18px; margin: 0; flex: 1; }
+  header .tag { color: var(--acc); font-weight: 700; }
+  .ico { background: var(--card); border: 1px solid var(--line); color: var(--txt); border-radius: 10px; height: 38px; min-width: 42px; font-size: 18px; cursor: pointer; }
+  #may { width: 100%; max-width: 760px; background: linear-gradient(160deg, #1d2440, #10152a); border: 1px solid var(--line); border-radius: 22px; padding: 14px; box-shadow: 0 12px 40px #0008; }
+  #man { width: 100%; aspect-ratio: 4 / 3; display: block; border-radius: 6px; background: #000; image-rendering: pixelated; touch-action: none; cursor: pointer; }
+  .duoi { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+  #boot { background: #2b334f; color: var(--txt); border: 1px solid #3a4468; border-radius: 999px; padding: 9px 18px; font-weight: 700; letter-spacing: .5px; cursor: pointer; user-select: none; }
+  #boot.down { background: var(--acc); color: #222; }
+  .goi { color: var(--mut); font-size: 13px; flex: 1; }
+  #batDau { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #000a; z-index: 5; }
+  #batDau button { background: var(--acc); color: #222; border: 0; border-radius: 14px; padding: 16px 26px; font-size: 18px; font-weight: 800; cursor: pointer; }
+  .note { width: 100%; max-width: 760px; color: var(--mut); font-size: 13px; }
+  .note a { color: var(--acc); }
+  :fullscreen #may, .full #may { max-width: none; border-radius: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+  :fullscreen #man, .full #man { width: auto; max-width: 100%; max-height: calc(100vh - 80px); margin: 0 auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🦖 Game Khủng Long <span class="tag">· chơi thử</span></h1>
+  <button class="ico" id="amThanh" title="Âm thanh">🔊</button>
+  <button class="ico" id="toanMan" title="Toàn màn hình">⛶</button>
+</header>
+<div id="may">
+  <canvas id="man" width="320" height="240"></canvas>
+  <div class="duoi">
+    <button id="boot" title="Nút BOOT trên mạch (phím cách)">BOOT</button>
+    <div class="goi">Chạm / bấm chuột lên màn để chơi. <b>BOOT</b> = tạm dừng (máy tính: phím cách).</div>
+  </div>
+</div>
+<p class="note">Đây là bản chơi thử trên web, giống hệt code chạy trên mạch ES3C28P (ESP32-S3, màn 2.8" cảm ứng). Kỷ lục được lưu trên trình duyệt này.
+  Muốn chơi trên máy thật: <a href="../../">vào trang nạp code</a>.</p>
+<div id="batDau"><button>▶ Bấm để bắt đầu</button></div>
+<script type="module" src="choi.js"></script>
+</body>
+</html>

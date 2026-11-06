@@ -1,0 +1,2 @@
+Mạch ES3C28P | Cổng USB-C | Máy tính / sạc | cấp điện + nạp code, không cần nối dây
+Pin Li-ion 3.7V | + / − | Cổng pin trên mạch | không bắt buộc, mạch tự sạc

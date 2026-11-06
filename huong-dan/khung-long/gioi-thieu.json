@@ -1,0 +1,28 @@
+{
+  "_ghi_chu": "Mau dien san cho du an Game Khung Long (trang quan ly > Du an moi > Dien san tu mau). Mac dinh AN (visible false), bat len khi muon cong bo.",
+  "id": "khung-long",
+  "name": "Game Khủng Long",
+  "emoji": "🦖",
+  "chip": "ESP32-S3",
+  "board": "Mạch LCDWIKI ES3C28P (ESP32-S3 N16R8, màn 2.8\" cảm ứng, loa)",
+  "desc": "6 game khủng long trên màn cảm ứng, có nhạc, kỷ lục, chơi thử được trên web",
+  "longDesc": "Bộ 6 game khủng long cho mạch màn cảm ứng 2.8 inch: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch và Trứng 3D. Mỗi game có 3 mức Dễ / Thường / Khó, lưu kỷ lục, nhạc nền 8-bit và tiếng hiệu ứng. Có tự tắt màn, tắt nguồn bằng nút BOOT để đỡ tốn pin. Bấm \"Chơi thử trên web\" để chơi ngay trên điện thoại trước khi nạp.",
+  "note": "Chỉ dùng cho mạch ES3C28P (không cần nối dây). Lần đầu mở máy sẽ hiện 3 dấu cộng để chỉnh cảm ứng: chạm lần lượt vào tâm từng dấu.",
+  "minFlash": 16,
+  "minPsram": 8,
+  "visible": false,
+  "freeOn": true,
+  "proOn": false,
+  "free": {
+    "ver": "v23.1",
+    "features": [
+      "6 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch, Trứng 3D",
+      "3 mức Dễ / Thường / Khó, lưu kỷ lục từng game",
+      "Nhạc nền 8-bit + tiếng hiệu ứng, chỉnh âm lượng",
+      "Trứng 3D: hình mịn đổ bóng, trời ngày / hoàng hôn / đêm, chế độ Vô hạn",
+      "Tự tắt màn khi để yên, tắt nguồn bằng nút BOOT",
+      "Báo pin, nhận biết đang sạc",
+      "Xoay màn 180°, xem dung lượng bộ nhớ trong Cài đặt"
+    ]
+  }
+}

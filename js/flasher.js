@@ -267,6 +267,10 @@ function pick(id, scroll) {
   $("pName").textContent = cur.name;
   $("pChip").textContent = cur.chip || "ESP32";
   $("pDesc").textContent = cur.longDesc || cur.desc || "";
+  // Du an co ban choi thu tren web (thu muc choi/<ma du an>/) -> hien nut "Choi thu"
+  $("pPlay").classList.add("hide");
+  { const pid0 = cur.id; fetch(`choi/${pid0}/index.html`, { method: "HEAD", cache: "no-cache" }).then((r) => {
+      if (r.ok && cur && cur.id === pid0) { $("pPlay").href = `choi/${pid0}/`; $("pPlay").classList.remove("hide"); } }).catch(() => {}); }
   applyUI(siteCfg, cur.board || cur.chip || "ESP32");   // khung "Can chuan bi" co ten mach cua du an
   $("pNote").textContent = cur.note || "";
   $("pNote").classList.toggle("hide", !cur.note);
