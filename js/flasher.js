@@ -482,6 +482,28 @@ async function download(t, onP) {
   return out.map((f) => ({ data: f.data, address: f.address }));
 }
 
+// Ban Pro co khoa theo mach (vd Game Khung Long): firmware chua dau "KLKHOA" + khoa + dia chi.
+// Tao ban quyen cho DUNG mach nay (theo MAC) va ghi kem; chep flash sang mach khac -> MAC khac -> firmware tu khoa.
+async function themBanQuyen(files, mac) {
+  const M = [0x4B, 0x4C, 0x4B, 0x48, 0x4F, 0x41, 0, 1];
+  for (const f of files) {
+    const d = f.data;
+    for (let i = d.indexOf(0x4B); i >= 0 && i + 44 <= d.length; i = d.indexOf(0x4B, i + 1)) {
+      if (M.some((v, k) => d[i + k] !== v)) continue;
+      const m = String(mac || "").split(":").map((h) => parseInt(h, 16));
+      if (m.length !== 6 || m.some(isNaN)) throw new Fail("Không đọc được mã MAC của mạch để ghi bản quyền Pro", "bản quyền");
+      const key = await crypto.subtle.importKey("raw", d.slice(i + 8, i + 40), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+      const tag = new Uint8Array(await crypto.subtle.sign("HMAC", key, new Uint8Array([...new TextEncoder().encode("khung-long"), ...m])));
+      const addr = (d[i + 40] | d[i + 41] << 8 | d[i + 42] << 16 | d[i + 43] << 24) >>> 0;
+      const sec = new Uint8Array(4096).fill(0xFF);
+      sec.set([0x4B, 0x4C, 0x42, 0x51], 0); sec.set(m, 4); sec.set(tag, 10);
+      log("Ghi bản quyền Pro khoá theo mạch này");
+      return [...files, { data: sec, address: addr }].sort((a, b) => a.address - b.address);
+    }
+  }
+  return files;
+}
+
 $("go").onclick = async () => {
   if (busy || !cur || !tier()) return;
   if (!("serial" in navigator)) return alert("Hãy dùng Chrome hoặc Edge trên máy tính.");
@@ -558,8 +580,9 @@ $("go").onclick = async () => {
     }
 
     rec.stage = "tải";
-    const files = attachConfig(await download(t, (p) => prog(0.03 + p * 0.12, "Đang tải firmware…")), cfgBlob);
+    let files = attachConfig(await download(t, (p) => prog(0.03 + p * 0.12, "Đang tải firmware…")), cfgBlob);
     if (cfgBlob) log("Ghi kèm cấu hình tùy chỉnh của bạn");
+    if (t === "pro") files = await themBanQuyen(files, rec.mac);
 
     rec.stage = "nạp";
     const sizes = files.map((f) => f.data.length), all = sizes.reduce((a, b) => a + b, 0);

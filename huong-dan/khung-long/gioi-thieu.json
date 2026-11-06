@@ -5,16 +5,16 @@
   "emoji": "🦖",
   "chip": "ESP32-S3",
   "board": "Mạch LCDWIKI ES3C28P (ESP32-S3 N16R8, màn 2.8\" cảm ứng, loa)",
-  "desc": "5 game khủng long miễn phí + Trứng 3D ở bản Pro, có nhạc, kỷ lục, chơi thử trên web",
-  "longDesc": "Bộ game khủng long cho mạch màn cảm ứng 2.8 inch. Bản miễn phí có 5 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch. Bản Pro có thêm Trứng 3D (hình mịn đổ bóng, trời ngày / đêm, chế độ Vô hạn, quân lên cấp). Mỗi game có 3 mức Dễ / Thường / Khó, lưu kỷ lục, nhạc nền 8-bit. Có tự tắt màn, tắt nguồn bằng nút BOOT để đỡ tốn pin. Bấm \"Chơi thử trên web\" để chơi bản miễn phí ngay trên điện thoại.",
-  "note": "Chỉ dùng cho mạch ES3C28P (không cần nối dây). Lần đầu mở máy sẽ hiện 3 dấu cộng để chỉnh cảm ứng: chạm lần lượt vào tâm từng dấu.",
+  "desc": "Máy chơi game khủng long cầm tay: 5 game miễn phí, Trứng 3D ở bản Pro – chơi thử ngay trên web",
+  "longDesc": "Biến mạch màn cảm ứng 2.8 inch thành máy chơi game cầm tay! Bản miễn phí có 5 trò: chạy né xương rồng, vỗ cánh bay qua cột đá, chạy vượt đền 3D, giữ ổ trứng trước bầy bọ và né mưa thiên thạch. Bản Pro mở thêm Trứng 3D – thủ thành đồ hoạ mịn đổ bóng, trời chuyển ngày sang đêm có đom đóm, trùm khổng lồ rung màn và chế độ Vô hạn. Mỗi game có 3 mức Dễ / Thường / Khó, lưu kỷ lục, nhạc 8-bit sôi động. Không cần nối dây, nạp xong là chơi – bấm \"Chơi thử trên web\" để chơi ngay trên điện thoại trước khi nạp.",
+  "note": "Chỉ dùng cho mạch ES3C28P (không cần nối dây). Lần đầu mở máy sẽ hiện 3 dấu cộng để chỉnh cảm ứng: chạm lần lượt vào tâm từng dấu. Bản Pro khoá theo mạch: chỉ chạy trên đúng mạch đã nạp bằng mã Pro, chép sang mạch khác sẽ tự khoá Trứng 3D.",
   "minFlash": 16,
   "minPsram": 8,
   "visible": false,
   "freeOn": true,
   "proOn": true,
   "free": {
-    "ver": "v24",
+    "ver": "v24.1",
     "features": [
       "5 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch",
       "3 mức Dễ / Thường / Khó, lưu kỷ lục từng game",
@@ -25,14 +25,15 @@
     ]
   },
   "pro": {
-    "ver": "v24 Pro",
+    "ver": "v24.1 Pro",
     "features": [
       "Tất cả 5 game của bản miễn phí",
       "Thêm game Trứng 3D: con vật vẽ mịn đổ bóng, sân cỏ chi tiết",
       "Trời đổi ngày / hoàng hôn / đêm có đom đóm, mây và bướm bay",
       "Chế độ Vô hạn, kỷ lục riêng",
       "Xẻng nhổ quân, combo, quân lên cấp có sao",
-      "Trùm ra sân rung màn, dấu cháy / băng / hố bom trên cỏ"
+      "Trùm ra sân rung màn, dấu cháy / băng / hố bom trên cỏ",
+      "Khoá theo mạch: bản quyền gắn với mạch đã nạp"
     ]
   }
 }
