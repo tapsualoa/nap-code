@@ -5,24 +5,34 @@
   "emoji": "🦖",
   "chip": "ESP32-S3",
   "board": "Mạch LCDWIKI ES3C28P (ESP32-S3 N16R8, màn 2.8\" cảm ứng, loa)",
-  "desc": "6 game khủng long trên màn cảm ứng, có nhạc, kỷ lục, chơi thử được trên web",
-  "longDesc": "Bộ 6 game khủng long cho mạch màn cảm ứng 2.8 inch: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch và Trứng 3D. Mỗi game có 3 mức Dễ / Thường / Khó, lưu kỷ lục, nhạc nền 8-bit và tiếng hiệu ứng. Có tự tắt màn, tắt nguồn bằng nút BOOT để đỡ tốn pin. Bấm \"Chơi thử trên web\" để chơi ngay trên điện thoại trước khi nạp.",
+  "desc": "5 game khủng long miễn phí + Trứng 3D ở bản Pro, có nhạc, kỷ lục, chơi thử trên web",
+  "longDesc": "Bộ game khủng long cho mạch màn cảm ứng 2.8 inch. Bản miễn phí có 5 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch. Bản Pro có thêm Trứng 3D (hình mịn đổ bóng, trời ngày / đêm, chế độ Vô hạn, quân lên cấp). Mỗi game có 3 mức Dễ / Thường / Khó, lưu kỷ lục, nhạc nền 8-bit. Có tự tắt màn, tắt nguồn bằng nút BOOT để đỡ tốn pin. Bấm \"Chơi thử trên web\" để chơi bản miễn phí ngay trên điện thoại.",
   "note": "Chỉ dùng cho mạch ES3C28P (không cần nối dây). Lần đầu mở máy sẽ hiện 3 dấu cộng để chỉnh cảm ứng: chạm lần lượt vào tâm từng dấu.",
   "minFlash": 16,
   "minPsram": 8,
   "visible": false,
   "freeOn": true,
-  "proOn": false,
+  "proOn": true,
   "free": {
-    "ver": "v23.1",
+    "ver": "v24",
     "features": [
-      "6 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch, Trứng 3D",
+      "5 game: Chạy, Bay, Vượt Đền, Giữ Trứng, Thiên Thạch",
       "3 mức Dễ / Thường / Khó, lưu kỷ lục từng game",
       "Nhạc nền 8-bit + tiếng hiệu ứng, chỉnh âm lượng",
-      "Trứng 3D: hình mịn đổ bóng, trời ngày / hoàng hôn / đêm, chế độ Vô hạn",
       "Tự tắt màn khi để yên, tắt nguồn bằng nút BOOT",
       "Báo pin, nhận biết đang sạc",
       "Xoay màn 180°, xem dung lượng bộ nhớ trong Cài đặt"
+    ]
+  },
+  "pro": {
+    "ver": "v24 Pro",
+    "features": [
+      "Tất cả 5 game của bản miễn phí",
+      "Thêm game Trứng 3D: con vật vẽ mịn đổ bóng, sân cỏ chi tiết",
+      "Trời đổi ngày / hoàng hôn / đêm có đom đóm, mây và bướm bay",
+      "Chế độ Vô hạn, kỷ lục riêng",
+      "Xẻng nhổ quân, combo, quân lên cấp có sao",
+      "Trùm ra sân rung màn, dấu cháy / băng / hố bom trên cỏ"
     ]
   }
 }

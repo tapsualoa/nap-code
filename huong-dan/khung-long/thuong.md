@@ -15,7 +15,7 @@
 - **Vượt Đền**: vuốt trái / phải để đổi làn và rẽ ở khúc cua, vuốt lên để nhảy, vuốt xuống để trượt
 - **Giữ Trứng**: đặt khủng long chặn bọ trộm trứng (bản hình pixel)
 - **Thiên Thạch**: kéo ngón tay để khủng long chạy theo, né thiên thạch rơi (vệt đỏ = chỗ sắp rơi)
-- **Trứng 3D**: bản Giữ Trứng hình mịn, có xẻng nhổ quân, chế độ **Vô hạn**, quân lên cấp
+- **Trứng 3D**: chỉ có ở **bản Pro** (ô bị khoá ở bản miễn phí)
 
 ## Cài đặt (bánh răng ở menu)
 - **Tắt màn**: 30 giây / 1 / 3 / 5 phút / không — chạm màn hoặc bấm BOOT để bật lại
